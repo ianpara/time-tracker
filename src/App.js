@@ -1,10 +1,14 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import ProfileCard from "./ProfileCard";
 import TimeCard from "./TimeCard";
 import { timeData } from "./data";
 
 
 function App() {
+
+  useEffect(() => {
+    document.title = "Time Tracking Dashboard ";
+  }, []);
 
   // eslint-disable-next-line
   const [times, setTime] = useState(timeData);
