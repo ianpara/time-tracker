@@ -3,8 +3,8 @@ import profilePic from './images/image-jeremy.png'
 const ProfileCard = ({ handleTimeChange, currentTime }) => {
 
     return (
-        <div className="px-4 xs:px-0 xs:mx-auto md:col-span-2 lg:col-span-1 lg:row-span-2 w-full">
-            <div className="relative p-6 bg-profile rounded-xl flex lg:flex-col items-center lg:items-start space-x-4 lg:space-x-0 lg:space-y-8 h-2/3">
+        <div className="md:col-span-2 lg:col-span-1 lg:row-span-2 w-full">
+            <div className="relative p-8 md:p-6 bg-profile rounded-xl flex lg:flex-col items-center lg:items-start space-x-4 lg:space-x-0 lg:space-y-8 h-2/3">
                 <div className="flex-shrink-0">
                     <img className="h-16 w-16 rounded-full border-2 border-white" src={profilePic} alt="Profile of Jeremy Robson" />
                 </div>
