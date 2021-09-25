@@ -1,5 +1,11 @@
 module.exports = {
-  purge: ['./src/**/*.{js,jsx,ts,tsx}', './build/index.html'],
+  purge: {
+    content: ['./src/**/*.{js,jsx,ts,tsx}', './build/index.html'],
+
+    options: {
+      safelist: ['bg-work', 'bg-play', 'bg-study', 'bg-exercise', 'bg-social', 'bg-self-care']
+    }
+  },
   darkMode: false, // or 'media' or 'class'
   theme: {
     screens: {
