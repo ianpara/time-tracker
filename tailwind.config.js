@@ -41,6 +41,7 @@ module.exports = {
     extend: {
       margin: ['last'],
       cursor: ['hover'],
+      brightness: ['hover']
     },
   },
   plugins: [],
