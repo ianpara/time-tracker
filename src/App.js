@@ -6,16 +6,27 @@ import { timeData } from "./data";
 
 function App() {
 
+  // Set title
   useEffect(() => {
     document.title = "Time Tracking Dashboard ";
   }, []);
 
+  // set useState for times json
   // eslint-disable-next-line
   const [times, setTime] = useState(timeData);
-  const [currentTime, setCurrentTime] = useState("daily");
 
+  // selected time frame useState
+  const [currentTime, setCurrentTime] = useState("weekly");
+
+  useEffect(() => {
+    const storedCurrentTime = localStorage.getItem('currentTime') || 'weekly';
+    setCurrentTime(storedCurrentTime);
+  }, [])
+
+  // change time frame function
   const handleTimeChange = (type) => {
     setCurrentTime(type);
+    localStorage.setItem('currentTime', type);
   }
 
   return (

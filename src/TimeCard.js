@@ -2,6 +2,7 @@ import Ellipsis from './images/icon-ellipsis.svg';
 
 const TimeCard = ({ time, currentTime }) => {
 
+    // set previous stats wording from time frame selected
     let timeWord;
     if (currentTime === "weekly") {
         timeWord = "Last Week";
